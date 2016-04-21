@@ -1,6 +1,6 @@
 # File is managed by puppet
 
-<% if @osfamily == 'Debian' and @lsbmajdistrelease > 7 %>
+<% if @osfamily == 'Debian' and @lsbmajdistrelease.to_i > 7 %>
 # Debian 8's rsyslogd comes without backward compatibility switch '-c'
 RSYSLOGD_OPTIONS=""
 <% else %>
