@@ -5,7 +5,7 @@
 #################
 
 $ModLoad imuxsock # provides support for local system logging
-$ModLoad imklog   # provides kernel logging support (previously done by rklogd) 
+$ModLoad imklog   # provides kernel logging support (previously done by rklogd)
 #$ModLoad immark  # provides --MARK-- message capability
 
 ###########################
@@ -32,4 +32,4 @@ $IncludeConfig <%= scope.lookupvar('rsyslog::rsyslog_d') -%>*.conf
 #
 # Emergencies are sent to everybody logged in.
 #
-*.emerg				*
+*.emerg				:omusrmsg:*
